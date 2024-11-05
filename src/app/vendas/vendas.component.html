@@ -1,0 +1,109 @@
+<header class="header-absolute" (click)="openLink()">
+  <nav class="navbar navbar-expand-xl">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../assets/images/Ton_Parceiro_Logo_RGB-07.png"
+          width="300"
+          height="200"
+          alt=""
+        />
+      </a>
+      <a class="navbar-brand me-0">
+        <h2 class="black-friday">
+          Black Friday:
+        </h2>
+        <h2 class="descritivo">Aproveite e lucre mais com a Maquininha Ton</h2>
+      </a>
+    </div>
+  </nav>
+</header>
+<main (click)="openLink()">
+  <section class="py-0">
+    <div class="position-relative overflow-hidden pb-7 pt-8">
+      <div class="position-relative">
+        <div class="row">
+          <div class="col-xxl-8 text-center mx-auto">
+            <h2
+              class="small fw-bold bg-secondary-grad rounded px-2 px-sm-3 py-2 mb-3 d-inline-flex"
+            >
+              <span
+                class="h1 fw-bold text-primary-grad ityped-cursor-opacity mb-0 d-block"
+              >
+                Escolha a sua:
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="position-relative overflow-hidden">
+      <div
+        class="h-300px w-100 bg-secondary bg-opacity-50 position-absolute top-0 start-0"
+      ></div>
+
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        navigation="true"
+        space-between="30"
+        centered-slides="true"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+      >
+        <swiper-slide
+          ><img class="maquininha" src="../../assets/images/T3p.png" 
+        /></swiper-slide>
+        <swiper-slide
+          ><img class="maquininha" src="../../assets/images/T2.png" 
+        /></swiper-slide>
+        <swiper-slide
+          ><img class="maquininha" src="../../assets/images/T1.png" 
+        /></swiper-slide>
+        <swiper-slide
+          ><img class="maquininha" src="../../assets/images/T3.png" 
+        /></swiper-slide>
+      </swiper-container>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+    </div>
+  </section>
+</main>
+
+<footer
+  class="bg-dark position-relative overflow-hidden py-6 pt-xl-8"
+  data-bs-theme="dark"
+>
+  <div class="container position-relative">
+    <div class="row g-4">
+      <div class="col-lg-8 mx-auto text-center descritivo">
+        <h2 class="my-3">Adquira sua maquininha Ton, é simples e fácil</h2>
+        <img
+          class="my-3"
+          src="../assets/images/parceiroStonLogo.png"     
+          alt=""
+        />
+        <p class="mb-5">
+          Copyright © 2024 All rights reserved | Consultor Autorizado Ton
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

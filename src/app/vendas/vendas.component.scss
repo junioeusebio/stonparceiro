@@ -1,0 +1,58 @@
+.container {
+  background: #262626;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background: #262626;
+}
+
+.overflow-hidden {
+  background: #00d700;
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.black-friday {
+  align-items: center;
+  text-align: center;
+  color: rgb(238, 151, 20);
+}
+
+.descritivo {
+  color: white;
+}
+.maquininha {
+  margin: 10px 0px 40px 0px;
+}
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: black;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+}
