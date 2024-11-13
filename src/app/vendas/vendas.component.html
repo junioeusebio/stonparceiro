@@ -97,7 +97,7 @@
     <div class="row g-4">
       <div class="col-lg-8 mx-auto text-center descritivo">
         <h2 class="my-3">Adquira sua maquininha Ton, é simples e fácil</h2>
-        <img class="my-3" src="../assets/images/parceiroStonLogo.png" alt="" />
+        <img class="my-3" src="../assets/images/parceiroStonLogo.png" alt="" allow="autoplay"/>
         <p class="mb-5">
           Copyright © 2024 All rights reserved | Consultor Autorizado Ton
         </p>
@@ -105,3 +105,16 @@
     </div>
   </div>
 </footer>
+<div class="modal" style="display: block;" *ngIf="close">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body logo">      
+          <img class="logo" src="../../assets/images/Ton_Pro_Story_Parceiro.png"  height="-10%" width="70%">      
+      </div>
+      <div class="modal-footer logo">
+        <button type="button" class="btn btn-secondary" style="background-color: #003c00 !important" data-dismiss="modal" (click)="closeModal()">Pular</button>       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop show" *ngIf="close"></div>
