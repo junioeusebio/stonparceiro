@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IWebData } from '../google-tag-manager/google-analytics.interface';
 
 @Component({
@@ -10,13 +11,25 @@ export class VendasComponent implements OnInit {
   close = true;
   loading = false;
 
+  constructor(private route: ActivatedRoute) {}
+
   ngOnInit(): void {
     this.verifyURL();
   }
 
   verifyURL() {
-    const currentRout = window.location.href;
-    if (currentRout.slice(-5) === 'cupom') {
+    let param = '';
+    this.route.params.subscribe((params) => (param = params['cupom']));
+
+    if (!param) {
+      this.route.queryParams.subscribe((params) => {
+        param = params['cupom'] || '';
+      });
+    }
+
+    console.log(param);
+
+    if (param === 'especial') {
       this.loading = true;
       this.gtmPush();
     } else {
@@ -34,10 +47,9 @@ export class VendasComponent implements OnInit {
       page_title: document.title,
     };
     (<any>window).dataLayer.push(web);
-   
-     this.openLink();
-     this.loading = false;
- 
+
+    this.openLink();
+    this.loading = false;
   }
 
   closeModal() {

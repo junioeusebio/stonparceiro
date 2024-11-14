@@ -5,19 +5,13 @@ import { VendasComponent } from './vendas/vendas.component';
 const routes: Routes = [
   {
     path: '', 
-    component: VendasComponent,
-    
+    component: VendasComponent
   },
   {
-    path: '**', 
-    component: VendasComponent,
-    
+    path: ':cupom', 
+    component: VendasComponent   
   },
-  {
-    path: 'cupom', 
-    component: VendasComponent,
-    
-  },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
