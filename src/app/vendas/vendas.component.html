@@ -20,6 +20,10 @@
     </div>
   </nav>
 </header>
+  <div class="d-flex justify-content-center m-5" *ngIf="loading">
+    <div class="spinner-border spinner-border-sm text-success" style="width: 10rem; height: 10rem; " role="status"></div>
+  </div>
+<div *ngIf="!loading">
 <main (click)="openLink()">
   <section class="py-0">
     <div class="position-relative overflow-hidden pb-7 pt-8">
@@ -88,7 +92,7 @@
     </div>
   </section>
 </main>
-
+</div>
 <footer
   class="bg-dark position-relative overflow-hidden py-6 pt-xl-8"
   data-bs-theme="dark"
@@ -105,7 +109,7 @@
     </div>
   </div>
 </footer>
-<div class="modal" style="display: block;" *ngIf="close">
+<div class="modal" style="display: block;" *ngIf="close && !loading">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body logo">      
@@ -118,3 +122,12 @@
   </div>
 </div>
 <div class="modal-backdrop show" *ngIf="close"></div>
+<!-- Event snippet for Compra conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-1028741388/NMVHCJbc-OcZEIyyxeoD',
+      'value': 1.0,
+      'currency': 'BRL',
+      'transaction_id': ''
+  });
+</script>

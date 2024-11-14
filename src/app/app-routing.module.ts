@@ -13,6 +13,11 @@ const routes: Routes = [
     component: VendasComponent,
     
   },
+  {
+    path: 'cupom', 
+    component: VendasComponent,
+    
+  },
 ];
 
 @NgModule({
