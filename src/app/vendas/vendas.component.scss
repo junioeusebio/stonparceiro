@@ -1,5 +1,15 @@
+.teto {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffb00;
+  font-size: x-small;
+  font-weight: bold;
+}
+
 .container {
-  background: #262626;
+  background: #ffffff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -7,7 +17,7 @@
 }
 
 .navbar {
-  background: #262626;
+  background: #ffffff;
 }
 
 .overflow-hidden {
@@ -59,4 +69,37 @@ swiper-slide img {
   width: 30%;
   height: 30%;
   object-fit: cover;
+  border-radius: 10%;
+}
+
+.container-footer {
+  background: #262626;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-descritivo {
+  color: black;
+}
+
+.maquininha-swiper {
+  cursor: pointer;
+  background: #00d700;
+  margin-bottom: 1px;
+  // padding-top: 15px;
+}
+
+.modal{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta{
+  cursor: pointer;
+  font-size: 2rem;
+  color: #00d700;
 }
