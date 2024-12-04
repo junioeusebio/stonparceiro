@@ -1,15 +1,26 @@
-name: remote ssh command
-on: [push]
+name: Deploy para a Umbler
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
 jobs:
-  build:
-    name: Build
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v0.1.10
+      - name: Instala chave SSH
+        uses: shimataro/ssh-key-action@v2
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          script: cd public && git pull
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: Checkout do branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Commit para Umbler usando git remote
+        run: |
+          git remote add umbler ${{ secrets.UMBLER_REMOTE }}
+          git push umbler main:master -f
