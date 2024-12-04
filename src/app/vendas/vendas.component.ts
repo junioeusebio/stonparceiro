@@ -11,8 +11,11 @@ import { Sites } from './site.emun';
 export class VendasComponent implements OnInit {
   close = true;
   loading = false;
+  manutencao = false;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    this.manutencao = true;
+  }
 
   ngOnInit(): void {
     this.verifyURL();
