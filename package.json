@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --aot --build-optimizer --source-map --output-hashing=all --subresource-integrity",
+    "postbuild": "gulp compress && node post-build.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,6 +21,7 @@
     "@angular/router": "^15.2.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "gulp": "^5.0.0",
     "rxjs": "~7.8.0",
     "swiper": "^11.1.14",
     "tslib": "^2.3.0",

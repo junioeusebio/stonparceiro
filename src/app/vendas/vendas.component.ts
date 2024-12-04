@@ -12,6 +12,7 @@ export class VendasComponent implements OnInit {
   close = true;
   loading = false;
   manutencao = false;
+  imageSrc = 'https://stonparceiro.com.br/assets/images/Ton_Parceiro_Logo_RGB-07.webp';
 
   constructor(private route: ActivatedRoute) {
     this.manutencao = true;
